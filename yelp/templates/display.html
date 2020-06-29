@@ -1,0 +1,4 @@
+<h3>Photos</h3>
+{% for image in images %}
+	<img src="{{ url_for('static',filename='photos/' + image)}}" >
+{% endfor %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+	<h1>Display photos</h1>
+		<form action="/display" method="post">
+		<d1>
+			<dt>How many photos do you want displayed:</dt>
+			<dd><input type="number" id="amount_photos" name="amount_photos"></dd>
+		</d1>
+		<input type="submit" value="Display photos">
+		</form>
+{% endblock %}

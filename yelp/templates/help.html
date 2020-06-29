@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 class="w3-center w3-jumbo" style="margin-bottom:64px" >Help</h1>
+<div class="w3-center ">
+    <span class="w3-text-black w3-hide-small" style="font-size:35px">
+    	Looking for a type of Cuisine or City not listed? </br>
+    </span>
+    <span class="w3-text-black  " style="font-size:25px">
+    	That probably means there isn't a restaurant with that cuisine or in that city available.</br></br>
+    </span>
+    <span class="w3-text-black " style="font-size:20px">
+    	We apologies for any inconvenience this may cause you.
+    </span>
+    <p><a href="{{ url_for('user_input') }}" class="w3-button w3-xxlarge w3-black">Let me try again</a></p>
+</div>
+
+
+{% endblock content %}

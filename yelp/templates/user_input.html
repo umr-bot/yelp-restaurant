@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section w3-display-middle w3-xxlarge" >
+        <form  method="POST" action = ""  >
+            <!--will POST the information to the same route that we're currently on--> 
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Find A Restaurant in Arizona</legend>
+                <select name= "days" type = "text" required > <!-- selector for days -->
+                    <option value="" selected disabled hidden>Select a Day</option>
+                    {% for day in days %}
+                    <option value= "{{day}}">{{day}}</option>
+                    {% endfor %}
+                </select><br>
+                <select name= "times" type="text" required > <!-- selector for times -->
+                    <option value="" selected disabled hidden>Select a Time</option>
+                    {% for time in times %}
+                    <option value= "{{time}}">{{time}}</option>
+                    {% endfor %}
+                </select><br>
+                <select name= "categories" type="text" id="categories" required> <!-- selector for categories -->
+                    <option value="" selected disabled hidden>Select a Cuisine</option> 
+                    {% for category in categories %}
+                    <option value= "{{category}}">{{category}}</option>
+                    {% endfor %}
+                </select><br>
+                <select name= "locations" type="text" required> <!-- selector for city -->
+                    <option value="" selected disabled hidden>Select a City</option> 
+                    {% for city in locations %}
+                    <option value= "{{city}}">{{city}}</option>
+                    {% endfor %}
+                </select>
+            </fieldset>
+            <br>
+            <div class="form-group w3-hover-sepia">   
+                <button type="submit">
+                 Search
+                </button>
+            </div>
+            <small class="text-muted ml-2 w3-large"><!-- redirect to help page -->
+                <a class="ml-2" href="{{ url_for('help') }}" >Need Help?</a>
+            </small>
+        </form>
+    </div>
+{% endblock content%}

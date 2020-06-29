@@ -1,0 +1,5 @@
+PROTO = "bolt"
+USER = "neo4j"
+PASSWORD = "1532"
+HOSTNAME = "localhost"
+PORT = "8000"

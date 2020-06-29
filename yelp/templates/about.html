@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+	<div class=" w3-center">
+	    <span class="w3-text-black w3-hide-small" style="font-size:35px">
+	    	Find the exact restaurant you desire. With the help of a yelp database, we'll help you find the restaurant of your dreams- with the cuisine you desire, in the city you choose, open at the exact time you want to go there. And if you aren't satisfied with our choice, we'll suggest a few others that we think you would like.<br><br>
+	    </span>
+	    <medium class="text-muted ml-2"><!-- redirect to help page -->
+        	<a class="ml-2" href="{{ url_for('help') }}" >Need Help?</a>
+    	</medium>
+	</div>
+
+{% endblock content %}
+
+
